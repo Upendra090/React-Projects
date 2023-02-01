@@ -1,0 +1,273 @@
+.App {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 4rem 6rem;
+  position: relative;
+}
+
+.quotable {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10rem;
+}
+
+.quote > p {
+  color: var(--whiteClr);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote > h4 {
+  color: var(--whiteClr);
+  padding-left: 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.btn-box {
+  padding-top: 0.3rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.date {
+  padding-bottom: 2.3rem;
+}
+
+.greeting-box {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.greeting-box > span {
+  font-size: 1.15rem;
+}
+
+.greet-msg {
+  padding: 0 0.5rem;
+}
+
+.digi-clock {
+  display: flex;
+  align-items: flex-end;
+}
+
+.digi-clock > h5 {
+  font-size: 7rem;
+  line-height: 1;
+  margin: 1rem 0;
+  color: var(--whiteClr);
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding-left: 0.3rem;
+}
+
+.fc {
+  color: red;
+}
+
+.time-loc {
+  padding-bottom: 2rem;
+  padding-left: 0.4rem;
+  font-size: 1.15rem;
+  color: var(--whiteClr);
+}
+
+.day,
+.month {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+.day {
+  padding-right: 0.3rem;
+}
+
+.f {
+  font-size: 1.85rem;
+}
+
+.short-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.short-details > .location {
+  font-size: 1.15rem;
+  color: var(--whiteClr);
+}
+
+.short-details > .more {
+  background-color: white;
+  font-size: 1.15rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-family: inherit;
+  letter-spacing: 0.15rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: fixed;
+  z-index: 100;
+  right: 6rem;
+}
+
+.arrow {
+  background-color: black;
+  margin-left: 0.2rem;
+  width: 25px;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+.full-details {
+  height: 40vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  background-color: rgb(170, 170, 170);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.full-details[data-show="true"] {
+  bottom: 0;
+}
+
+.time-zone-details {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.time-zone,
+.numbers {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.country,
+.day-number,
+.day-in-year,
+.week-in-year {
+  height: inherit;
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.country > span,
+.day-number > span,
+.day-in-year > span,
+.week-in-year > span {
+  font-size: 1.05rem;
+  letter-spacing: 0.15rem;
+  color: rgba(0, 0, 0, 0.849);
+}
+
+.country > h5,
+.day-number > h5,
+.day-in-year > h5,
+.week-in-year > h5 {
+  font-size: 1.55rem;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .quotable {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .App {
+    padding: 2rem;
+  }
+
+  .quote > p {
+    font-size: 0.85rem;
+  }
+
+  .quote > h4 {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: baseline;
+  }
+
+  .date {
+    width: 100%;
+    text-align: center;
+  }
+
+  .greeting-box > span {
+    font-size: 0.85rem;
+  }
+
+  .digi-clock {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .digi-clock > h5 {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 0.4rem 0 0 0;
+  }
+
+  .time-loc {
+    padding-bottom: 1rem;
+  }
+
+  .short-details > .more {
+    right: 2rem;
+  }
+
+  .time-zone-details {
+    width: 100%;
+  }
+
+  .country > span,
+  .day-number > span,
+  .day-in-year > span,
+  .week-in-year > span {
+    font-size: 0.65rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .country > h5,
+  .day-number > h5,
+  .day-in-year > h5,
+  .week-in-year > h5 {
+    font-size: 1.05rem;
+    margin-top: 0.2rem;
+    font-weight: 500;
+  }
+
+  .time-zone,
+  .numbers {
+    margin-bottom: 0.3rem;
+  }
+}

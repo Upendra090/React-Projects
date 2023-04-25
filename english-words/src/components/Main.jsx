@@ -28,7 +28,6 @@ export default function Main(props) {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data.synonyms);
         setSynonyms(response.data.synonyms);
         setAntonyms(response.data.antonyms);
       })

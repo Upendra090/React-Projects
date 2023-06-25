@@ -95,6 +95,6 @@ Thank you to all the contributors who have shared their React projects and made 
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, please feel free to contact us at your-email@example.com.
+If you have any questions, suggestions, or feedback, please feel free to contact us at [Upendra Kumar](mailto:kuupendra564@gmail.com).
 
 Happy coding!

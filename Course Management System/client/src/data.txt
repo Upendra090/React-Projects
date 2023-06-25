@@ -1,0 +1,57 @@
+<div className="course">
+            <div className="course__img"></div>
+            <div className="course__details">
+              <div className="course__textdetails">
+                <span className="course__name">React Course</span>
+                <span className="course__instructor">Upendra Kumar</span>
+              </div>
+              <div className="course__numdetails">
+                <span className="course__duration">Duration 45 Hours</span>
+                <span className="course__price">Price 999</span>
+              </div>
+              <p className="course__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque, optio iste tempore error aut modi, cum repudiandae
+                dolores eveniet totam pariatur. Unde, laudantium mollitia eaque
+                quod dolore alias. Doloremque, repellat.
+              </p>
+            </div>
+          </div>
+          <div className="course">
+            <div className="course__img"></div>
+            <div className="course__details">
+              <div className="course__textdetails">
+                <span className="course__name">React Course</span>
+                <span className="course__instructor">Upendra Kumar</span>
+              </div>
+              <div className="course__numdetails">
+                <span className="course__duration">Duration 45 Hours</span>
+                <span className="course__price">Price 999</span>
+              </div>
+              <p className="course__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque, optio iste tempore error aut modi, cum repudiandae
+                dolores eveniet totam pariatur. Unde, laudantium mollitia eaque
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <div className="course">
+            <div className="course__img"></div>
+            <div className="course__details">
+              <div className="course__textdetails">
+                <span className="course__name">React Course</span>
+                <span className="course__instructor">Upendra Kumar</span>
+              </div>
+              <div className="course__numdetails">
+                <span className="course__duration">Duration 45 Hours</span>
+                <span className="course__price">Price 999</span>
+              </div>
+              <p className="course__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque, optio iste tempore error aut modi, cum repudiandae
+                dolores eveniet totam pariatur. Unde, laudantium mollitia eaque
+                Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>

@@ -149,6 +149,12 @@ button:hover {
   margin: 0 auto;
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.15) 5px 10px 25px 5px;
+  transition: transform 0.4s ease;
+}
+
+.course:hover {
+  transform: translateY(-8px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 45px 0px;
 }
 
 .course__img {
@@ -157,8 +163,8 @@ button:hover {
   border-radius: 0.5rem;
   background-image: linear-gradient(
     to right,
-    rgb(122, 255, 140),
-    rgb(111, 255, 224)
+    rgb(129, 255, 129),
+    rgb(88, 255, 219)
   );
 }
 

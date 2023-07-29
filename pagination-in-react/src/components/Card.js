@@ -12,7 +12,9 @@ export default function Card(props) {
       <div className="card__item">
         <p className="el-description">
           {props.content.substring(0, 60)}
-          <a className="el-readmore">Read More</a>
+          <a href="/" className="el-readmore">
+            Read More
+          </a>
         </p>
       </div>
       <div className="card__item card__info">

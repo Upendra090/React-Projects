@@ -3,15 +3,18 @@ import Card from "../components/Card";
 import Pagination from "../components/Pagination";
 import blogs from "../data.json";
 import { paginate } from "../utils/paginate";
+import FilterButton from "../components/FilterButton";
+import PageHeading from "../components/PageHeading";
 
 export default function Home() {
   const currentPageFromLastTime = window.localStorage.getItem("currentPage");
   const [state, setState] = useState({
     totalBlogs: blogs.length,
-    blogPerPage: 12,
+    blogPerPage: 15,
     currentPage: currentPageFromLastTime
       ? parseInt(currentPageFromLastTime)
       : 1,
+    source: ["all", "news", "blog", "magazine"],
   });
 
   useEffect(() => {
@@ -22,7 +25,23 @@ export default function Home() {
     setState({ ...state, currentPage: page });
   };
 
-  const pages = paginate(blogs, state.currentPage, state.blogPerPage);
+  const hangleSourceSelect = (tag) => {
+    setState({ ...state, selectedSource: tag, currentPage: 1 });
+  };
+
+  const selectedSource = state.selectedSource;
+
+  let filtered;
+
+  if (selectedSource && selectedSource === "all") {
+    filtered = blogs;
+  } else {
+    filtered = selectedSource
+      ? blogs.filter((s) => s.source === selectedSource)
+      : blogs;
+  }
+
+  const pages = paginate(filtered, state.currentPage, state.blogPerPage);
 
   const blogElement = pages.map((blog) => {
     return <Card key={blog.id} {...blog} />;
@@ -30,12 +49,15 @@ export default function Home() {
 
   return (
     <div className="container">
-      <div className="container__heading">
-        <h3 className="el-heading">All published blogs</h3>
-      </div>
+      <PageHeading filtered={filtered} selectedSource={selectedSource} />
+      <FilterButton
+        tags={state.source}
+        selectedItem={state.selectedSource}
+        onItemSelect={hangleSourceSelect}
+      />
       <div className="cards">{blogElement}</div>
       <Pagination
-        count={state.totalBlogs}
+        count={filtered.length}
         pageSize={state.blogPerPage}
         currentPage={state.currentPage}
         handlePage={handlePageEvent}

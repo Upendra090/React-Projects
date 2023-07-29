@@ -155,6 +155,50 @@ body {
   background-color: orangered;
 }
 
+.filterbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.fliter-text h3 {
+  font-size: 1rem;
+}
+
+.filter-item {
+  margin-left: 1rem;
+  padding: 0.3rem 0;
+  background-color: var(--primaryBlack);
+  border-radius: 0.35rem;
+}
+
+.filter-btn {
+  font-size: 0.83rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  color: var(--primaryWhite);
+  cursor: pointer;
+}
+
+.filter-btn:first-child {
+  border-top-left-radius: 0.35rem;
+  border-bottom-left-radius: 0.35rem;
+}
+
+.filter-btn:nth-child(2) {
+  border-left: 0.5px solid rgb(56, 56, 56);
+  border-right: 0.5px solid rgb(56, 56, 56);
+}
+
+.filter-btn:nth-child(3) {
+  border-right: 0.5px solid rgb(56, 56, 56);
+}
+
+.filter-btn:last-child {
+  border-top-right-radius: 0.35rem;
+  border-bottom-right-radius: 0.35rem;
+}
+
 @media (max-width: 1000px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);

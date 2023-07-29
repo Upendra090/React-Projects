@@ -1,5 +1,4 @@
 import _ from "lodash";
-import { useState } from "react";
 
 export default function Pagination(props) {
   const { count, pageSize, currentPage, handlePage } = props;

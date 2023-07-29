@@ -1,3 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+
+:root {
+  --extraShadow: rgba(0, 0, 0, 0.25) 0 12px 25px 0;
+  --lightShadow: rgba(0, 0, 0, 0.25) 0 6px 15px 0;
+  --primaryWhite: #d6d6d6;
+  --primaryBlack: #1b1b1b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 15px;
+  font-family: "Delius", cursive;
+}
+
 .App {
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
+  background-color: #252525;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  box-shadow: var(--lightShadow);
+}
+
+.navbar__logo {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: auto;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.el-theme {
+  background-color: var(--primaryWhite);
+  color: var(--primaryBlack);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 0.25rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.container__heading {
+  margin-bottom: 1rem;
+}
+
+.el-heading {
+  font-size: 1.25rem;
+  color: var(--primaryWhite);
+}
+
+.cards {
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  min-width: 200px;
+  padding: 1rem 0.85rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--lightShadow);
+  background-color: #313131;
+}
+
+.card__item {
+  margin-bottom: 0.65rem;
+}
+
+.card__item:last-child {
+  margin-bottom: 0;
+}
+
+.el-title {
+  font-size: 1.15rem;
+  color: var(--primaryWhite);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.el-author {
+  text-align: end;
+  color: var(--primaryWhite);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: -0.5rem;
+}
+
+.el-description {
+  font-size: 0.9rem;
+  color: var(--primaryWhite);
+  font-weight: 500;
+}
+
+.el-readmore {
+  color: orangered;
+}
+
+.card__info {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.el-text {
+  margin-right: auto;
+  color: var(--primaryWhite);
+  font-size: 0.8rem;
+}
+
+.el-date,
+.el-readtime,
+.el-source {
+  color: var(--primaryWhite);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.pagination {
   text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.el-pg {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  margin: 0 0.2rem;
+  border-radius: 0.35rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primaryBlack);
+  cursor: pointer;
+}
+
+.active {
+  background-color: orangered;
+}
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar,
+  .container,
+  .cards {
+    padding: 1rem;
+  }
+
+  .cards {
+    padding: 1rem 0.5rem;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+
+  .el-title {
+    font-size: 1.1rem;
+  }
 }

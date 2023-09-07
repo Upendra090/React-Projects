@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primaryWhite: #fff;
+  --secondaryWhite: #e6e6e6;
+  --lowWhite: #b6b6b6;
+  --btnPrimaryClr: #008b23;
+  --btnSecondaryClr: #39a35c;
+  --secondaryColor: #272727;
+  --bgColor: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+  --borderColor: rgb(214, 214, 214);
+  --lowBlack: #00000040;
+  --fontFamily: "Poppins", sans-serif;
+}
+
+::placeholder {
+  color: var(--lowWhite);
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--fontFamily);
+}
+
+.app {
+  width: 100%;
+  padding-block: 2rem;
+  height: 100%;
+  min-height: 100vh;
+  background-image: var(--bgColor);
+}
+
+.title {
+  text-align: center;
+  color: var(--primaryWhite);
+}
+
+.title h1 {
+  font-size: 5.5rem;
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
+}
+
+.container {
+  width: min(420px, 100%);
+  margin: 2rem auto 2rem;
+  height: max-content;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border-radius: 0.45rem;
+  box-shadow: var(--lowBlack) 0 10px 20px 0;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--secondaryWhite);
+}
+
+.form__inputbox {
+  margin-block-end: 1rem;
+  position: relative;
+}
+
+.el-label {
+  color: var(--secondaryWhite);
+  margin-inline-start: 0.25rem;
+}
+
+input,
+button[type="submit"] {
+  width: 100%;
+  padding-block: 0.75rem;
+  margin-block-start: 0.25rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--primaryWhite);
+  outline: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+input {
+  padding-inline-start: 0.35rem;
+  background-color: transparent;
+  border: 1.5px solid var(--borderColor);
+  border-radius: 0.3rem;
+  padding-block: 0.5rem;
+  font-weight: 500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add__more {
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.45rem;
+  font-size: 0.9rem;
+  margin-block-start: 0.4rem;
+  border: none;
+  outline: none;
+  background-color: #501d8a;
+  color: var(--secondaryWhite);
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.el-friend {
+  margin-bottom: 0.45rem;
+}
+
+button[type="submit"] {
+  border: none;
+  background-color: var(--btnSecondaryClr);
+  border-radius: 3rem;
+  text-transform: uppercase;
+  margin-block-end: 0.65rem;
+  cursor: pointer;
+  transition: background-color 0.45s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--btnPrimaryClr);
+}
+
+.hello {
+  width: 100%;
+  height: 50px;
+}
+
+.el-some {
+  position: relative;
+}
+
+.el-cancel {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  padding: 0.35rem 0.25rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  cursor: pointer;
+}

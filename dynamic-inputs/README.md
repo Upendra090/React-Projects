@@ -6,4 +6,4 @@ It is practice project of that problem.
 
 ### Here is a preview of completed project
 
-![](/public/preview.gif)
+![](https://github.com/Kr-Upendra/React-Projects/blob/main/dynamic-inputs/public/preview.gif)
